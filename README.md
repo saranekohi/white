@@ -6,3 +6,4 @@ White-label (rebrand API) https://api.highriskshop.com with your own custom doma
 * Route your custom domain to the newly created Cloudflare worker.
 
 For more information visit: https://www.highriskshop.com/affiliate-white-label/
+Technical Custom Domain Guide: https://www.highriskshop.com/white-label-api-custom-domain-guide/
