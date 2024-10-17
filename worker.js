@@ -13,10 +13,15 @@ async function handleRequest(request) {
   
   // Make a request to the target URL
   const response = await fetch(modifiedRequest);
-  
+
+  // Check if the response status code is in the 40X range and redirect to custom page if it is
+  if (response.status >= 400 && response.status < 500) {
+    return Response.redirect('https://www.example.com', 302);
+  }
+
   // Clone the response to modify headers
   const modifiedResponse = new Response(response.body, response);
-  
+
   // Set headers to cloak the origin
   modifiedResponse.headers.set('Access-Control-Allow-Origin', '*');
   
