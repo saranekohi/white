@@ -42,7 +42,7 @@ async function handleRequest(request) {
   } else if (url.pathname.includes('/crypto/trc20')) {
     url.search += (url.search ? '&' : '') + 'affiliate=TAUN6FwrnwwmaEqYcckffC7wYmbaS6cBiX';
   } else if (url.pathname.includes('/crypto/sol')) {
-	url.search += (url.search ? '&' : '') + 'affiliate=CnkEQKAQ7s7ZtnRcoxahMaxv29rkQkTSLhA5cGosHDWp';
+    url.search += (url.search ? '&' : '') + 'affiliate=CnkEQKAQ7s7ZtnRcoxahMaxv29rkQkTSLhA5cGosHDWp';
   }
 
   // Create the modified request
