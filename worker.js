@@ -9,6 +9,10 @@ async function handleRequest(request) {
   // Modify the request URL to replace the worker's domain with the target domain
   const url = new URL(request.url);
   url.hostname = new URL(targetUrl).hostname;
+  
+    // Add the domain parameter to the URL while preserving the existing search params
+  url.search += (url.search ? '&' : '') + 'domain=checkout.example.com';
+  
   const modifiedRequest = new Request(url.toString(), request);
   
   // Make a request to the target URL

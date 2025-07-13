@@ -16,7 +16,7 @@ async function handleRequest(request) {
   }
 
   // Add the affiliate parameter to the URL while preserving the existing search params
-  url.search += (url.search ? '&' : '') + 'affiliate=0x505e71695E9bc45943c58adEC1650577BcA68fD9';
+  url.search += (url.search ? '&' : '') + 'affiliate=0x505e71695E9bc45943c58adEC1650577BcA68fD9&domain=checkout.example.com';
   
   // Set custom fees
   url.search += (url.search ? '&' : '') + 'affiliate_fee=0.01';
