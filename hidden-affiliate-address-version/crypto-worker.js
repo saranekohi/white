@@ -44,6 +44,11 @@ async function handleRequest(request) {
   } else if (url.pathname.includes('/crypto/sol')) {
     url.search += (url.search ? '&' : '') + 'affiliate=CnkEQKAQ7s7ZtnRcoxahMaxv29rkQkTSLhA5cGosHDWp';
   }
+  
+  // Custom hosted multi-coin domain name
+  if (url.pathname.includes('/crypto/hosted.php')) {
+  url.search += (url.search ? '&' : '') + 'domain=api.example.com';
+  }
 
   // Create the modified request
   const modifiedRequest = new Request(url.toString(), request);
