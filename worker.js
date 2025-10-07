@@ -11,7 +11,7 @@ async function handleRequest(request) {
   url.hostname = new URL(targetUrl).hostname;
   
     // Add the domain parameter to the URL while preserving the existing search params
-  url.search += (url.search ? '&' : '') + 'domain=checkout.example.com';
+  url.search += (url.search ? '&' : '') + 'domain=checkout.subpanel.me';
   
   const modifiedRequest = new Request(url.toString(), request);
   
@@ -20,7 +20,7 @@ async function handleRequest(request) {
 
   // Check if the response status code is in the 40X range and redirect to custom page if it is
   if (response.status >= 400 && response.status < 500) {
-    return Response.redirect('https://www.example.com', 302);
+    return Response.redirect('https://subpanel.me', 302);
   }
 
   // Clone the response to modify headers
